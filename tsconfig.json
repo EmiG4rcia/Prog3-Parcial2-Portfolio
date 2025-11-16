@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* === Archivos y carpetas === */
+    "rootDir": "./src", // Le decimos a TypseScript dónde están los archivos fuente
+    "outDir": "./src", // Generamos los .js en la misma carpeta que los .ts, para no romper tus rutas.
+
+    /* === Configuración para navegador === */
+    "target": "ES6",
+    "module": "ES6", //El navegador entiende módulos ES6, así podés usar import/export si querés.
+    "lib": ["DOM", "ES6"], //Incluye las definiciones del DOM (para usar document, window, etc).
+    "allowJs": true,
+    "moduleResolution": "node",
+    "isolatedModules": false,
+
+    /* === Opciones de salida === */
+    "sourceMap": false,
+    "declaration": false,
+
+    /* === Chequeos estrictos === */
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

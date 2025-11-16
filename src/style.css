@@ -1,0 +1,1204 @@
+/* === CURSOR PERSONALIZADO (RUTA CORRECTA EN VITE) === */
+html, body {
+  cursor: url('/ui/Portal-Gun-1.png') 24 16, auto;
+}
+
+a, button, .portal-zone, .enter-btn {
+  cursor: url('/ui/Portal-Gun-1.png') 24 16, auto;
+}
+
+/* === CURSOR PERSONALIZADO — SIEMPRE VISIBLE === */
+* {
+  cursor: url('/ui/Portal-Gun-1.png') 24 16, auto !important;
+}
+
+
+/* === WELCOME PAGE === */
+body.welcome-body {
+  background: url('./assets/images/backgrounds/Imagen-Home.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-display, 'Trebuchet MS', sans-serif);
+  color: var(--text, white);
+}
+
+.welcome-container {
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Rick flotante y burbuja */
+.rick-speech {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.rick-head {
+  width: 100px;
+  height: auto;
+}
+
+.speech-bubble {
+  background: linear-gradient(180deg, rgba(0,255,200,0.1), rgba(0,255,200,0.05));
+  border: 2px solid rgba(0,255,200,0.4);
+  border-radius: 12px;
+  padding: 12px 16px;
+  max-width: 280px;
+  font-size: 1.05rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0,255,200,0.3);
+  color: white;
+  text-shadow: 0 0 6px rgba(0,255,200,0.6);
+  line-height: 1.4;
+}
+
+.portal-word {
+  color: #00ff99;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffcc, 0 0 12px #00ffaa;
+}
+
+/* Portal animado */
+.portal-zone {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.portal-gif {
+  width: 270px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.portal-zone:hover .portal-gif {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Animación zoom portal */
+.zoom-effect {
+  animation: zoomIn 1.2s forwards;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(8); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === HOME PAGE === */
+body.home-body {
+  background: url('./assets/images/backgrounds/Imagen-Pages.png') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text, white);
+  font-family: var(--font-sans, 'Trebuchet MS', sans-serif);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #cc00ff;
+  text-shadow: 0 0 8px #a200ff, 0 0 12px #8900b3;
+  margin-bottom: 10px;
+}
+
+/* === HOME — Título Welcome en amarillo/neón === */
+.welcome-neon {
+  color: #ffdd55; /* amarillo suave base */
+  text-shadow:
+    0 0 8px #ffcc33,
+    0 0 14px #ffbb22,
+    0 0 22px #ffaa00,
+    0 0 35px #ffdd55;
+  font-family: 'Orbitron', sans-serif; /* mantiene coherencia estética */
+  letter-spacing: 1px;
+}
+
+
+/* === HOME — Cuadro azul neón debajo de Welcome === */
+.intro-box {
+  border: 2px solid #00ccff;
+  padding: 18px 22px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background: rgba(0, 60, 100, 0.15);
+  box-shadow: 0 0 12px rgba(0,180,255,0.55);
+  backdrop-filter: blur(4px);
+}
+
+
+.home-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* Rick lateral (Home) */
+.rick-side {
+  position: fixed;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 50;
+}
+
+
+.rick-head-left {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.speech-bubble-left {
+  background: linear-gradient(180deg, rgba(0,255,200,0.1), rgba(0,255,200,0.05));
+  border: 2px solid rgba(0,255,200,0.4);
+  border-radius: 12px;
+  padding: 12px 16px;
+  max-width: 240px; /* 🔹 Más angosta que antes */
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0,255,200,0.3);
+  color: white;
+  text-shadow: 0 0 6px rgba(0,255,200,0.6);
+  line-height: 1.4;
+  animation: floatSpeech 4s ease-in-out infinite alternate;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+
+@keyframes floatSpeech {
+  from { transform: translateX(-10px) translateY(0); }
+  to { transform: translateX(-10px) translateY(-8px); }
+}
+
+/* Portal grid en Home */
+.portals-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.portal-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.portal-card:hover {
+  transform: scale(1.15);
+  text-shadow: 0 0 8px #00ffaa;
+}
+
+.portal-card:hover img {
+  transform: scale(1.15);
+}
+
+.portal-card img {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 10px #00ccff);
+  transition: transform 0.3s ease;
+}
+
+.portal-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* === HOME — Texto de los portales azules con glow blanco === */
+.portals-grid .portal-card span {
+  color: #ffffff;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.7),
+    0 0 12px rgba(180, 220, 255, 0.8),
+    0 0 18px rgba(150, 200, 255, 0.8);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.portals-grid .portal-card:hover span {
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 1),
+    0 0 16px rgba(180, 220, 255, 1),
+    0 0 24px rgba(100, 170, 255, 1),
+    0 0 32px rgba(120, 200, 255, 1);
+}
+
+
+/* Footer */
+.site-footer {
+  position: static;
+  margin-top: 40pxx;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* === Ajustes Home Page finales === */
+
+/* Burbuja más vertical y menos ancha */
+.speech-bubble-left {
+  background: linear-gradient(180deg, rgba(0,255,200,0.1), rgba(0,255,200,0.05));
+  border: 2px solid rgba(0,255,200,0.4);
+  border-radius: 12px;
+  padding: 12px 16px;
+  max-width: 240px;
+  font-size: 1.05rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0,255,200,0.3);
+  color: white;
+  text-shadow: 0 0 6px rgba(0,255,200,0.6);
+  line-height: 1.4;
+  animation: floatSpeech 4s ease-in-out infinite alternate;
+}
+
+/* Portales azules como botones alineados a la izquierda */
+.portals-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.portal-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: var(--font-display, 'Trebuchet MS', sans-serif);
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.portal-card img {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 0 8px #00ccff);
+  transition: transform 0.3s ease;
+}
+
+.portal-card:hover img {
+  transform: scale(1.1);
+}
+
+.portal-card:hover {
+  text-shadow: 0 0 8px #00ccff;
+  transform: scale(1.05);
+}
+
+/* Títulos principales del Home */
+/* Centrado del encabezado */
+.home-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffaa, 0 0 20px #00cc99;
+  margin: 0;
+}
+
+.home-header h2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+  color: #b0fff0;
+  margin-top: 8px;
+}
+
+
+/* === AJUSTES DE ESCALA GENERAL EN HOME === */
+
+/* Reducir padding global del Home */
+.home-container {
+  max-width: 750px;
+  gap: 1.4rem;
+  padding-top: 20px;
+}
+
+/* Títulos más pequeños */
+.home-container h2 {
+  font-size: 1.8rem;
+}
+
+.home-container p {
+  font-size: 1rem;
+}
+
+/* --- Rick y burbuja más pequeños --- */
+.rick-side {
+  left: 20px;
+  transform: translateY(-40%);
+}
+
+.rick-head-left {
+  width: 85px;
+}
+
+.speech-bubble-left {
+  max-width: 180px;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  line-height: 1.25;
+}
+
+/* --- Portales azules más a la derecha --- */
+.portals-grid {
+  align-items: center;     /* ⬅ Centra horizontalmente */
+  margin-left: 0px;      /* ⬅ Empuja hacia la derecha */
+  gap: 1rem;
+}
+
+.portal-card img {
+  width: 55px;
+  height: 55px;
+}
+
+.portal-card span {
+  font-size: 1rem;
+}
+
+/* --- Quitar menú superior --- */
+.main-nav {
+  display: none !important;
+}
+
+/* --- Header más compacto --- */
+.logo-name h1 {
+  font-size: 2.2rem;
+}
+
+.logo-name p {
+  font-size: 1rem;
+}
+
+.main-nav{
+  display: none !important;
+}
+
+
+
+
+/* === ABOUT PAGE === */
+
+.about-body {
+  background: url('../../assets/images/backgrounds/Imagen-Pages.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Fredoka One', sans-serif;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px 0 60px 0; /* menos padding general */
+}
+
+/* Portal + Home button */
+.home-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-portal {
+  width: 55px; /* más chico */
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: drop-shadow(0 0 5px #00ff88)
+}
+
+.home-button:hover .home-portal {
+  transform: scale(1.15) rotate(2deg);
+  filter: drop-shadow(0 0 15px #00ffcc) brightness(1.3);
+}
+
+.home-icon {
+  width: 26px;
+  filter: drop-shadow(0 0 6px white);
+}
+
+/* Título */
+.about-title {
+  font-size: 2.2rem; /* reducido */
+  margin-top: 70px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.green-accent {
+  color: #00ff88;
+  text-shadow: 0 0 12px #00ffaa;
+}
+
+/* FOTO */
+.about-photo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.about-photo {
+  width: 170px; /* reducido */
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0,255,200,0.5);
+}
+
+/* NOMBRE */
+.about-name {
+  margin-top: 15px;
+  font-size: 1.3rem; /* reducido */
+  color: #7fffd4;
+  text-shadow: 0 0 8px #00ffaa;
+}
+
+/* CUADRO DE TEXTO */
+.about-box {
+  margin: 30px auto;
+  max-width: 600px; /* más compacto */
+  padding: 20px 22px;
+  border: 2px solid #00ffee;
+  background: rgba(0,255,200,0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0,255,200,0.25);
+  font-size: 0.95rem; /* más chico */
+  line-height: 1.55;
+  border-radius: 8px;
+}
+
+
+
+/* ===== SKILLS PAGE (RED NEON) ===== */
+
+.skills-body {
+  background: url('../../assets/images/backgrounds/Imagen-Pages.png') center/cover fixed;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+/* Home Portal (arriba izquierda) */
+.home-portal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.portal-home-gif {
+  width: 95px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.portal-home-gif:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px rgba(0,255,100,0.9));
+}
+
+.home-icon {
+  font-size: 28px;
+  color: white;
+  margin-top: -5px;
+}
+
+/* Título rojo neón */
+.skills-header h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #ff4d4d;
+  text-shadow: 0 0 12px #ff8080, 0 0 25px #cc0000;
+}
+
+.accent-red {
+  color: #ff4d4d;
+}
+
+/* Caja principal */
+.skills-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Cuadros grandes */
+.skill-box {
+  width: 40%;
+  border: 3px solid #ff4d4d;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(255, 50, 50, 0.08);
+  box-shadow: 0 0 15px rgba(255, 80, 80, 0.4);
+}
+
+.skill-img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+
+.skill-img-leader {
+  width: 110px;
+  margin-bottom: 15px;
+}
+
+/* Caja pequeña */
+.skills-row {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.skill-box.small {
+  width: 30%;
+}
+
+.skill-img-small {
+  width: 140px;
+  margin-bottom: 15px;
+}
+.skill-img-small-perception {
+  width: 220px;
+  margin-bottom: 15px;
+}
+
+
+/* ===== Rick lateral para SKILLS (No fijo en pantalla, sino en la página) ===== */
+
+.skills-page {
+  position: relative; /* Necesario para que Rick se posicione dentro del layout */
+}
+
+.rick-side-skills {
+  position: absolute;      /* antes fixed */
+  right: 150px;             /* Rick a la derecha */
+  top: 420px;              /* AJUSTA ESTE VALOR hasta que quede justo donde lo querés */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.rick-head-skills {
+  width: 120px;
+  transition: transform 0.2s ease;
+  transform: scaleX(-1);
+}
+
+.rick-head-skills:hover {
+  transform: scaleX(-1) scale(1.08);
+}
+
+/* Burbuja oculta por defecto */
+.speech-bubble-red {
+  display: none;
+  background: rgba(255, 60, 60, 0.15);
+  border: 2px solid rgba(255, 80, 80, 0.8);
+  padding: 12px 16px;
+  border-radius: 12px;
+  width: 220px;
+  color: white;
+  text-shadow: 0 0 6px #ff8080;
+  box-shadow: 0 0 10px rgba(255,80,80,0.4);
+  position: absolute;
+  top: 130px;
+  right: 0;
+}
+
+/* Al hacer clic → mostrar burbuja */
+.rick-side-skills.active .speech-bubble-red {
+  display: block;
+}
+
+
+/* ===== PROJECTS LAB (MORADO NEÓN) ===== */
+
+.projects-body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* NO SCROLL */
+  height: 100vh;
+  width: 100vw;
+}
+
+.projects-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/images/backgrounds/Rick-Garage.jpg') center/cover no-repeat;
+}
+
+/* Contenedor principal encima del fondo */
+.projects-main {
+  min-height: 100vh;
+  padding: 30px 0 70px 0;
+}
+
+/* Título */
+.projects-header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;;
+}
+
+.projects-header p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  
+}
+
+.projects-header h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif !important;
+  letter-spacing: 2px;
+  font-size: 2.8rem;
+  color: #f15fff;
+  text-shadow: 0 0 14px #f72585, 0 0 26px #b5179e;
+}
+
+
+.accent-purple {
+  color: #f15fff;
+  text-shadow: 0 0 14px #f72585, 0 0 26px #b5179e;
+}
+
+.projects-subtitle {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* Capa para posicionar Rick y prototipos */
+.projects-overlay {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* Rick a la derecha, de pie sobre el suelo */
+.rick-lab {
+  position: absolute;
+  right: 630px;
+  bottom: 20px;
+  z-index: 30;
+  text-align: center;
+}
+
+
+
+.rick-img {
+  width: 400px;
+  height: auto;
+}
+
+
+/* === RICK DIALOG (PROJECTS PAGE) === */
+.rick-dialog {
+      position: absolute;
+  left: -140px;          /* Más a la izquierda */
+  top: -60px;             /* Más abajo, nivel de la cabeza */
+  width: 260px;
+  padding: 16px;
+  background: rgb(8, 67, 1);
+  border: 2px solid rgba(60, 255, 0, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 14px rgba(4, 255, 0, 0.55);
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-shadow: 0 0 6px rgba(0, 255, 94, 0.7);
+  z-index: 1000;        /* ¡Siempre por encima! */
+}
+
+
+/* Tarjetas de dispositivo */
+.device {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  z-index: 40;
+  pointer-events: auto;
+}
+
+.device-img {
+  width: 160px;
+  filter: drop-shadow(0 0 12px #d05bff);
+  transition: 0.3s ease;
+}
+
+.device:hover .device-img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 25px #ff55ff);
+}
+
+/* Texto emergente */
+/* === FIX: Texto emergente de dispositivos === */
+.device-text {
+  position: absolute;
+  display: none;
+  bottom: -150px;              /* debajo del dispositivo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  padding: 12px 16px;
+  background: rgba(80, 0, 110, 0.28);
+  border: 2px solid rgba(200, 0, 255, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(200, 0, 255, 0.55);
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-shadow: 0 0 6px rgba(200, 0, 255, 0.7);
+  z-index: 9999;              /* por encima de todo */
+}
+
+.device.open .device-text {
+  display: block;
+}
+
+.device.open .device-text {
+  display: block;
+}
+
+/* Dispositivo CV */
+.device.d1 {
+  left: 1800px;
+  top: 620px;
+}
+
+/* Dispositivo Consola */
+.device.d2 {
+  left: 850px;
+  top: 530px;
+}
+
+/* Dispositivo Radar Clima */
+.device.d3 {
+  left: 1420px;
+  top: 480px;
+}
+
+
+/* ===== PORTAL ESPECIAL PARA PROJECTS ===== */
+
+.projects-portal {
+  position: absolute;
+  top: 50px;        /* bajar portal */
+  left: -300px;        /* separarlo de la pared */
+  z-index: 20;
+}
+
+.projects-portal-gif {
+  width: 850px;      /* hacerlo más grande */
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: drop-shadow(0 0 18px rgba(120, 255, 120, 0.9));
+}
+
+.projects-portal-gif:hover {
+  transform: scale(1.12) rotate(2deg);
+  filter: drop-shadow(0 0 32px rgba(120, 255, 120, 1));
+}
+
+/* Quitar cursor de "pointer" falseado */
+.projects-portal, .projects-portal-gif {
+  cursor: url('/ui/Portal-Gun-1.png') 24 16, auto !important;
+}
+
+/* === RESUME PAGE === */
+
+.resume-body {
+  background: url('../../assets/images/backgrounds/Space-Background-2.jpg') center/cover fixed;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Centrado del portal + clippy */
+.resume-center {
+  position: absolute;
+  top: 52%;             /* 🔹 mové el grupo completo */
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  align-items: center;
+  gap: 120px;           /* 🔹 distancia entre Clippy y el portal */
+}
+
+/* Clippy */
+.clippy-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: -250px;
+
+}
+
+.clippy-img {
+  width: 110px;
+  filter: drop-shadow(0 0 15px white);
+}
+
+/* Diálogo Win98 */
+.clippy-dialog-img {
+    position: absolute;
+  top: -190px;          /* 🔹 más arriba */
+  left: -280px;         /* 🔹 más a la izquierda para no taparlo */
+  width: 330px;
+  filter: drop-shadow(0 0 10px white);
+  image-rendering: pixelated;
+}
+
+/* Portal blanco */
+.portal-white-big {
+  width: 280px;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: drop-shadow(0 0 25px rgba(255,255,255,0.9));
+}
+
+.portal-white-big:hover {
+  transform: scale(1.55);
+  filter: drop-shadow(0 0 60px rgba(255,255,255,1));
+}
+
+/* Rick flotando */
+.rick-floating {
+  position: absolute;
+  right: 80px;
+  top: 350px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.rick-resume-img {
+  width: 500px;  /* más grande que antes */
+  transition: transform 0.3s ease;
+}
+
+.rick-floating:hover .rick-resume-img {
+  transform: scale(1.1);
+}
+
+/* Burbuja de Rick */
+.speech-bubble-resume {
+  display: none;
+  width: 500px;
+  padding: 14px;
+  background: rgba(255,255,255,0.09);
+  border: 2px solid white;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  color: white;
+  text-shadow: 0 0 6px #b8aaff;
+  font-size: 0.85rem;
+  box-shadow: 0 0 12px rgba(255,255,255,0.4);
+  margin-top: 10px;
+}
+
+.rick-floating.active .speech-bubble-resume {
+  display: block;
+}
+
+/* === RESUME PAGE – RICK FLOTANTE === */
+
+.resume-body {
+  background: url('../../assets/images/backgrounds/Space-Background-2.jpg') center/cover fixed;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Contenedor general de resume si querés centrar todo (opcional si ya lo tenés) */
+.resume-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Rick en el costado, flotante y clickeable */
+.resume-rick {
+  position: absolute;
+  right: 100px;     /* mueve a Rick en X */
+  bottom: 120px;   /* mueve a Rick en Y (más alto = valor mayor) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.resume-rick-head {
+  width: 120px;                 /* 🔹 hacelo más grande o más chico acá */
+  transition: transform 0.2s ease;
+}
+
+.resume-rick-head:hover {
+  transform: scale(1.08);
+}
+
+/* Burbuja de Rick: oculta por defecto */
+.resume-rick-dialog {
+  position: absolute;
+  bottom: 110%;                /* por encima de la cabeza */
+  right: 0;
+  width: 260px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.35;
+  text-align: left;
+  text-shadow: 0 0 7px #ffffff;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  display: none;               /* 🔹 importantísimo */
+}
+
+/* Al hacer click en Rick aparece el texto, PERO Rick no se mueve */
+.resume-rick.active .resume-rick-dialog {
+  display: block;
+}
+
+/* Footer SOLO para la página Resume */
+.resume-body .site-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer {
+  position: static;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* === RESUME – TÍTULO === */
+
+.resume-header {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.resume-header h1 {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px white, 0 0 20px #d8d8ff, 0 0 30px #ffffff;
+}
+
+.resume-subtitle {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #e8e8ff;
+  text-shadow: 0 0 6px white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Footer normal para todas las páginas que no son Resume ni Projects */
+body:not(.resume-body):not(.projects-body) .site-footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home-body,
+.about-body {
+  min-height: 100vh;   /* Fuerza que la página sea por lo menos del alto del monitor */
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container{
+  flex: 1;  /* Hace que el contenido empuje al footer hacia abajo */
+}
+
+
+/* === CONTACT PAGE — AMARILLO NEÓN === */
+
+.contact-body {
+  background: url('../../assets/images/backgrounds/Space-Background-2.jpg') center/cover fixed;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TITULAR */
+.contact-title {
+  text-align: center;
+  margin-top: 140px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #ffe066;
+  text-shadow: 0 0 12px #ffea70, 0 0 25px #d6b800;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contact-list {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+/* CADA FILA */
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item img {
+  width: 55px;
+  filter: drop-shadow(0 0 8px #7fffd4);
+  transition: 0.3s ease;
+  margin: 18px 0;
+  padding: 8px 0;
+}
+
+/* HOVER EFECTO AMARILLO */
+.contact-item:hover {
+  color: #ffe066;
+  text-shadow: 0 0 12px #ffea70;
+}
+
+.contact-item:hover img {
+  filter: drop-shadow(0 0 18px #fff480);
+  transform: scale(1.12);
+}
+
+.contact-item:hover p {
+  text-shadow: 0 0 12px yellow;
+}
+
+/* Rick flotante */
+.contact-rick {
+  position: relative;
+  left: -600px;       /* ajustá manualmente si querés moverlo */
+  top: -50px;       /* ajustá manualmente si querés moverlo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.contact-rick-head {
+  width: 150px;
+}
+
+.contact-rick-bubble {
+  position: absolute;
+  bottom: 110%;
+  display: none;
+  background: rgba(255, 240, 150, 0.12);
+  border: 2px solid #ffe066;
+  border-radius: 10px;
+  padding: 12px 15px;
+  max-width: 240px;
+  font-size: 0.95rem;
+  color: white;
+  text-shadow: 0 0 8px #ffe066;
+  box-shadow: 0 0 12px rgba(255, 240, 150, 0.4);
+  margin-top: 10px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.contact-rick.active .contact-rick-bubble {
+  display: block;
+}

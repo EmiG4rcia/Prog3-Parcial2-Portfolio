@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Emiliano García</title>
+
+  <!-- CSS GENERAL -->
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- FONT ORBITRON -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact-body">
+
+  <!-- PORTAL A HOME -->
+  <a href="../home/home.html" class="home-portal">
+    <img src="../../assets/gifs/Portal-Verde-SinFondo.gif" class="portal-home-gif" alt="Home Portal">
+    <img src="../../assets/images/ui/home-button.png" class="home-icon" alt="Home Button">
+  </a>
+
+  <!-- TÍTULO PRINCIPAL -->
+  <h1 class="contact-title">CONTACT</h1>
+
+  <!-- LISTA DE CONTACTO -->
+  <div class="contact-list">
+
+    <a href="" class="contact-item" target="_blank">
+      GitHub
+      <img src="../../assets/images/contact/github-logo.png" alt="GitHub icon">
+    </a>
+
+    <a href="" class="contact-item" target="_blank">
+      Instagram
+      <img src="../../assets/images/contact/instagram-logo.png" alt="Instagram icon">
+    </a>
+
+    <a href="" class="contact-item" target="_blank">
+      Linkedin
+      <img src="../../assets/images/contact/linkedin-logo.png" alt="Linkedin icon">
+    </a>
+
+    <a href="" class="contact-item" target="_blank">
+      X account
+      <img src="../../assets/images/contact/X-logo.png" alt="X icon">
+    </a>
+
+    <a href="" class="contact-item">
+      Gmail
+      <img src="../../assets/images/contact/gmail-logo.png" alt="Gmail icon">
+    </a>
+
+  </div>
+
+  <!-- RICK FLOTANTE -->
+  <div class="contact-rick">
+    <img src="../../assets/gifs/rick-flotante-SinFondo.gif" class="contact-rick-head" alt="Rick floating">
+
+    <div class="contact-rick-bubble">
+      Here we go! All the options to contact Emiliano.<br>
+      Don't bother him too much, he's busy [*burp*].
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 Emiliano García. My Web Page. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT PARA EL RICK FLOTANTE -->
+  <script>
+    document.querySelector(".contact-rick").addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
